@@ -4,20 +4,26 @@
 
 ]]
 
-function letterPosition(letter)
-    local alphabet = "abcdefghijklmnopqrstuvwxyz";
-    local pos = string.find(alphabet, letter:lower());
-    
-    return pos;
+---@param letter string
+---@return number
+local function letterPosition(letter)
+  local alphabet = "abcdefghijklmnopqrstuvwxyz";
+  local pos = string.find(alphabet, letter:lower());
+
+  if pos == nil then
+    return -1;
+  end
+
+  return pos;
 end
 
 local input = nil;
 
 repeat
   io.write("Input two letter(example: ab): ");
-  
+
   local data = io.read();
-  
+
   input = data;
 until #data == 2 and data:match("^[a-zA-Z]+$");
 
