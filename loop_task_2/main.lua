@@ -1,6 +1,6 @@
 --[[
 
-Определить, сколько в числе четных цифр, 
+Определить, сколько в числе четных цифр,
 а сколько нечетных. Число вводится с клавиатуры
 
 ]]
@@ -19,7 +19,11 @@ local number = 0;
 repeat
     io.write("Input number: ");
 
-    number = tonumber(io.read());
+    local line = tonumber(io.read());
+
+    if line ~= nil then
+        number = line
+    end
 until number ~= nil;
 
 while number > 0 do
