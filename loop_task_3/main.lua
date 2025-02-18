@@ -17,7 +17,7 @@ repeat
     if line ~= nil then
         value = line;
     end
-until value ~= nil
+until value ~= nil;
 
 local sum = 0;
 local mul = 1;
